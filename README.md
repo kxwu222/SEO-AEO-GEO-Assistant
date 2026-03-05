@@ -52,8 +52,6 @@ You don’t need to be an AI expert. The materials are written in plain, neutral
 
 ## Quick start
 
-Use this sequence for most projects:
-
 1. Start with `skills/seo-os.SKILL.md` to set principles and choose the right workflow.
 2. If you have search data, run `tools/gsc_ahrefs_clean.py` and then use `skills/serp-gap-analysis.SKILL.md`.
 3. Turn high-priority opportunities into briefs with `templates/aeo-brief.md`.
@@ -64,6 +62,11 @@ Use this sequence for most projects:
 For a fuller walkthrough, see `docs/skill-usage.md`.
 
 ---
+
+## Installation
+
+You can clone directly: https://github.com/kxwu222/SEO-AEO-GEO-Assistant.git into your agents
+
 
 ## Compatibility (which agents this works with)
 
@@ -76,19 +79,7 @@ This package is **markdown-first**, so it works in any environment where you can
 - **Perplexity**: Spaces / reference-doc workflows
 
 ---
-
-## Optional tools (recommended, not required)
-
-The Skills work without tools, but these make outputs far more data-grounded:
-
-- **Google Search Console** (for data analysis)
-- **Ahrefs/Semrush** (for keyword research)
-- **Screaming Frog** (for technical audits)
-
----
-
-## Installation & Requirements
-
+## Notes
 - The Markdown files (`SKILL.md`, `skills/*`, `templates/*`, `docs/*`) work in **any editor or AI environment**.
 - The Python helper `tools/gsc_ahrefs_clean.py` requires:
   - Python 3.8+
@@ -106,7 +97,6 @@ python tools/gsc_ahrefs_clean.py --help
 
 - **Current version:** `2.0`
 - **Status:** Production‑ready for in‑house use
-- **Last updated:** `2026‑03‑04`
 
 If you adapt this for your own organisation (e.g. industry‑specific workflows, localisation), consider forking the repo and maintaining your own versioning/changelog.
 
