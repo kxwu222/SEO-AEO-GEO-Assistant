@@ -68,17 +68,6 @@ cd SEO-AEO-GEO-Assistant
 **Step 2: Install in your AI agent**
 
 <details>
-<summary>Cursor / VS Code</summary>
-
-1. Open Settings → Extensions → AI → Custom Instructions
-2. Add new instruction file named "SEO Assistant"
-3. Copy contents of `SKILL.md`
-4. Attach files from `skills/` folder as references
-
-**Alternative:** Create `.cursorrules` file in project root with `SKILL.md` contents
-</details>
-
-<details>
 <summary>ChatGPT (Custom GPT)</summary>
 
 1. Go to https://chat.openai.com/gpts/editor
@@ -89,7 +78,7 @@ cd SEO-AEO-GEO-Assistant
 </details>
 
 <details>
-<summary>Claude (Project)</summary>
+<summary>Claude</summary>
 
 1. Create new Project in Claude.ai
 2. Upload `SKILL.md` and files from `skills/`, `templates/`, `docs/`
@@ -109,17 +98,6 @@ cd SEO-AEO-GEO-Assistant
 2. Paste `SKILL.md` contents into Instructions
 3. Upload key files: `skills/seo-os.SKILL.md`, `docs/geo-optimization-guide.md`
 4. Name "SEO-AEO-GEO Assistant" and save
-</details>
-
-<details>
-<summary>Other Agents (Perplexity, Windsurf, Codex, etc.)</summary>
-
-Most agents support custom instructions or project files:
-- Copy `SKILL.md` to your agent's instruction directory, or
-- Paste contents into project/workspace settings, or
-- Reference files in your project directory
-
-Check your agent's documentation for specific method.
 </details>
 
 ---
