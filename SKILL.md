@@ -1,5 +1,5 @@
 ---
-name: seo-aeo-geo-optimizer
+name: seo-aeo-geo-assistant
 description: Entry-point Skill (thin orchestrator) for the SEO–AEO–GEO modular package. Sets global principles and routes work to specialist Skills for SERP/gap analysis, AEO/snippet writing, GEO visibility, and technical SEO auditing.
 ---
 
