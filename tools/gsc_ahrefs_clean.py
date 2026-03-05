@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Quick helper to clean and summarise CSV exports from GSC/Ahrefs/Semrush
-before pasting into Cursor for use with the `snippet-aeo-content` skill.
+before pasting into an AI session for use with the `serp-gap-analysis` skill.
 
 Usage (basic):
 
@@ -22,6 +22,10 @@ Supported columns (case-insensitive; extra columns are ignored):
 You can pipe the output to a markdown file:
 
     python gsc_ahrefs_clean.py gsc_export.csv > gsc_summary.md
+
+Output is designed to be pasted into an AI workflow that follows:
+- `skills/serp-gap-analysis.SKILL.md` (data-first content gap analysis)
+- `templates/aeo-brief.md` (turn top opportunities into content briefs)
 """
 
 from __future__ import annotations
@@ -179,7 +183,9 @@ def print_markdown_summary(rows: List[Row]) -> None:
 
 
 def main(argv: Optional[List[str]] = None) -> int:
-    parser = argparse.ArgumentParser(description="Clean and summarise GSC/Ahrefs/Semrush CSV exports for use with snippet-aeo-content skill.")
+    parser = argparse.ArgumentParser(
+        description="Clean and summarise GSC/Ahrefs/Semrush CSV exports for use with the serp-gap-analysis Skill."
+    )
     parser.add_argument("csv_path", help="Path to the CSV export file.")
     args = parser.parse_args(argv)
 

@@ -1,5 +1,18 @@
 # GEO (Generative Engine Optimization) Deep-Dive Guide
 
+## Used by (Skill package)
+
+- **Primary Skill**: `skills/geo-visibility.SKILL.md`
+- **Related Skills**:
+  - `skills/aeo-snippet-writer.SKILL.md` (executes answer patterns and structures)
+  - `skills/serp-gap-analysis.SKILL.md` (identifies conversational query opportunities)
+  - `skills/seo-os.SKILL.md` (orchestration)
+
+## How to use this guide
+
+- Use this as the **long-form reference** for GEO concepts, templates, and measurement.
+- For day-to-day execution, follow `skills/geo-visibility.SKILL.md`, which links back here rather than duplicating everything.
+
 ## Table of Contents
 1. [What is GEO?](#what-is-geo)
 2. [Why GEO Matters in 2026](#why-geo-matters)

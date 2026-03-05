@@ -5,6 +5,20 @@ description: Template for planning web and social content optimised for featured
 
 # AEO + Featured Snippet Content Brief
 
+## Used by (Skill package)
+
+- **Primary Skill**: `skills/aeo-snippet-writer.SKILL.md`
+- **Related Skills**:
+  - `skills/serp-gap-analysis.SKILL.md` (creates the prioritised opportunity list that feeds briefs)
+  - `skills/geo-visibility.SKILL.md` (optional: add GEO/citation goals)
+  - `skills/seo-os.SKILL.md` (orchestration)
+
+## How to use this template
+
+- Fill sections 1–3 first (core details + context + data inputs).
+- Use section 5 to lock the **primary question** and **snippet format** before drafting content.
+- Treat any recommendations not grounded in supplied data as **Inference**.
+
 ## 1. Core details
 
 - **Working title**:  

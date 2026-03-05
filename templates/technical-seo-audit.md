@@ -1,5 +1,18 @@
 # Technical SEO Audit Template
 
+## Used by (Skill package)
+
+- **Primary Skill**: `skills/technical-seo-audit.SKILL.md`
+- **Related Skills**:
+  - `skills/seo-os.SKILL.md` (orchestration and prioritisation)
+  - `skills/serp-gap-analysis.SKILL.md` (optional: correlate technical issues to performance patterns)
+
+## How to use this template
+
+- Duplicate this file per site (or per major section) and fill in the sections you have data for.
+- If you don’t have a data source for a section, mark it as **Not assessed (no data provided)**.
+- End with a clear **Action Plan & Timeline** so engineering and stakeholders can execute.
+
 ## Audit Overview
 
 **Site:** [URL]  
