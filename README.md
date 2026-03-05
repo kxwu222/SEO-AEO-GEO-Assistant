@@ -1,121 +1,315 @@
-# SEO-AEO-GEO-Assistant Skill
+# SEO-AEO-GEO-Assistant
+Modern SEO optimization suite for AI agents. Optimize content for traditional search rankings, voice assistants, and AI citations in ChatGPT, Perplexity, Google AI Overviews, Claude, and Gemini.
 
-Modern SEO isn’t just blue links any more. `SEO-AEO-GEO-Assistant` is a **modular, workflow-driven Skill package** for **SEO**, **AEO (Answer Engine Optimization)**, and **GEO (Generative Engine Optimization)** so your content can win:
-
-- Traditional rankings and featured snippets
-- Voice and assistant answers
-- Citations in AI systems like Google AI Overviews, ChatGPT, Perplexity, Claude, Gemini, and Copilot
-
-It’s designed for **in‑house teams** who want practical, copy‑pasteable workflows instead of theory.
+**Built for in-house SEO teams** who need practical, data-driven workflows.
 
 ---
 
-## What’s Included
+## What This Does
 
-- **`SKILL.md`** – Entry point (thin orchestrator)  
-  Explains the system and routes work to the specialist Skills.
-
-- **`skills/`** – Specialist Skill modules  
-  - `skills/seo-os.SKILL.md` (core principles + routing)  
-  - `skills/serp-gap-analysis.SKILL.md` (data-first SERP + content gap analysis)  
-  - `skills/aeo-snippet-writer.SKILL.md` (featured snippets + AEO writing)  
-  - `skills/geo-visibility.SKILL.md` (GEO + AI visibility, llms.txt, testing)  
-  - `skills/technical-seo-audit.SKILL.md` (technical SEO audits + prioritisation)
-
-- **`templates/technical-seo-audit.md`** – Technical SEO audit template  
-  Covers crawlability, indexability, CWV, structured data, international SEO, and an action plan.
-
-- **`templates/aeo-brief.md`** – AEO + featured snippet content brief  
-  Captures intent, target questions, snippet formats, SERP context, and success criteria.
-
-- **`docs/geo-optimization-guide.md`** – GEO deep‑dive guide  
-  Long-form reference for GEO concepts, templates, and measurement.
-
-- **`docs/skill-usage.md`** – How to run the system  
-  Suggested end-to-end workflow and hand-offs between Skills.
-
-- **`tools/gsc_ahrefs_clean.py`** – CSV cleaner & summariser for search data  
-  Converts GSC/Ahrefs/Semrush exports into compact Markdown tables (by page + striking distance).
+- Analyze content gaps from Google Search Console / Ahrefs / Semrush data
+- Generate featured snippet content (paragraph, list, table, HowTo formats)
+- Optimize for AI citations (ChatGPT, Perplexity, AI Overviews)
+- Run technical SEO audits (crawlability, Core Web Vitals, schema markup)
+- Create topic clusters and content strategies
+- Test AI visibility across multiple platforms
+- Generate llms.txt files for AI crawler optimization
 
 ---
 
-## Who This Is For
+## Repository Structure
 
-- **In‑house SEO teams** who want repeatable, documented workflows
-- **Content strategists** planning topic clusters and briefs
-- **Technical SEOs** running audits and explaining priorities to stakeholders
-- **Teams experimenting with AI visibility** (GEO) and wanting a concrete playbook
-
-You don’t need to be an AI expert. The materials are written in plain, neutral English and assume familiarity with core SEO concepts.
-
----
-
-## Quick start
-
-1. Start with `skills/seo-os.SKILL.md` to set principles and choose the right workflow.
-2. If you have search data, run `tools/gsc_ahrefs_clean.py` and then use `skills/serp-gap-analysis.SKILL.md`.
-3. Turn high-priority opportunities into briefs with `templates/aeo-brief.md`.
-4. Draft or refine content with `skills/aeo-snippet-writer.SKILL.md`.
-5. If AI visibility matters, apply `skills/geo-visibility.SKILL.md` (reference `docs/geo-optimization-guide.md`).
-6. If there are crawl/index/CWV/schema issues, run `skills/technical-seo-audit.SKILL.md` with `templates/technical-seo-audit.md`.
-
-For a fuller walkthrough, see `docs/skill-usage.md`.
+```
+SEO-AEO-GEO-Assistant/
+├── SKILL.md                          # Entry point & orchestrator
+├── skills/                           # Specialist modules
+│   ├── seo-os.SKILL.md              # Core principles + routing
+│   ├── serp-gap-analysis.SKILL.md   # SERP & content gap analysis
+│   ├── aeo-snippet-writer.SKILL.md  # Featured snippets + AEO
+│   ├── geo-visibility.SKILL.md      # GEO optimization + AI visibility
+│   └── technical-seo-audit.SKILL.md # Technical SEO diagnostics
+├── templates/                        # Ready-to-use templates
+│   ├── technical-seo-audit.md       # Audit framework
+│   └── aeo-brief.md                 # Content brief template
+├── docs/                             # Reference guides
+│   ├── geo-optimization-guide.md    # Complete GEO strategy
+│   └── skill-usage.md               # End-to-end workflow
+└── tools/                            # Helper scripts
+    └── gsc_ahrefs_clean.py          # Clean GSC/Ahrefs/Semrush exports
+```
 
 ---
 
 ## Installation
 
-You can clone directly: https://github.com/kxwu222/SEO-AEO-GEO-Assistant.git into your agents
-
-
-## Compatibility (which agents this works with)
-
-This package is **markdown-first**, so it works in any environment where you can provide persistent instructions and reference files. Common examples:
-
-- **Cursor**: Skills / instruction files
-- **ChatGPT**: Custom GPT instructions + Knowledge files
-- **Claude**: Projects (with attached docs)
-- **Gemini**: Gems / saved instructions (with attached docs)
-- **Perplexity**: Spaces / reference-doc workflows
-
----
-## Notes
-- The Markdown files (`SKILL.md`, `skills/*`, `templates/*`, `docs/*`) work in **any editor or AI environment**.
-- The Python helper `tools/gsc_ahrefs_clean.py` requires:
-  - Python 3.8+
-  - Standard library only (no third‑party dependencies)
-
-Recommended:
+### Method 1: Via skills.sh (Recommended)
 
 ```bash
-python tools/gsc_ahrefs_clean.py --help
+npx skills add kxwu222/SEO-AEO-GEO-Assistant
 ```
+
+Verify installation:
+```bash
+npx skills list
+```
+
+Compatible with Claude Code, Cursor, Windsurf, and other skills.sh-enabled agents.
 
 ---
 
-## Versioning
+### Method 2: Manual Installation
 
-- **Current version:** `2.0`
-- **Status:** Production‑ready for in‑house use
+**Step 1: Clone the repository**
+```bash
+git clone https://github.com/kxwu222/SEO-AEO-GEO-Assistant.git
+cd SEO-AEO-GEO-Assistant
+```
 
-If you adapt this for your own organisation (e.g. industry‑specific workflows, localisation), consider forking the repo and maintaining your own versioning/changelog.
+**Step 2: Install in your AI agent**
+
+<details>
+<summary>Cursor / VS Code</summary>
+
+1. Open Settings → Extensions → AI → Custom Instructions
+2. Add new instruction file named "SEO Assistant"
+3. Copy contents of `SKILL.md`
+4. Attach files from `skills/` folder as references
+
+**Alternative:** Create `.cursorrules` file in project root with `SKILL.md` contents
+</details>
+
+<details>
+<summary>ChatGPT (Custom GPT)</summary>
+
+1. Go to https://chat.openai.com/gpts/editor
+2. Click "Create a GPT"
+3. Paste `SKILL.md` contents into Instructions
+4. Upload `.md` files from `skills/`, `templates/`, and `docs/` to Knowledge
+5. Name it "SEO-AEO-GEO Assistant" and save
+</details>
+
+<details>
+<summary>Claude (Project)</summary>
+
+1. Create new Project in Claude.ai
+2. Upload `SKILL.md` and files from `skills/`, `templates/`, `docs/`
+3. Add to Custom Instructions:
+   ```
+   You are an expert SEO strategist with access to the SEO-AEO-GEO-Assistant 
+   skill package. Follow workflows in SKILL.md. Use data-first methodology—
+   never invent metrics.
+   ```
+4. Save the project
+</details>
+
+<details>
+<summary>Gemini (Gem)</summary>
+
+1. Go to https://gemini.google.com/gems → New Gem
+2. Paste `SKILL.md` contents into Instructions
+3. Upload key files: `skills/seo-os.SKILL.md`, `docs/geo-optimization-guide.md`
+4. Name "SEO-AEO-GEO Assistant" and save
+</details>
+
+<details>
+<summary>Other Agents (Perplexity, Windsurf, Codex, etc.)</summary>
+
+Most agents support custom instructions or project files:
+- Copy `SKILL.md` to your agent's instruction directory, or
+- Paste contents into project/workspace settings, or
+- Reference files in your project directory
+
+Check your agent's documentation for specific method.
+</details>
+
+---
+
+## Quick Start
+
+### For Beginners
+
+1. Load `SKILL.md` in your AI agent
+2. Ask: *"What can you help me with using the SEO-AEO-GEO skills?"*
+3. Try a simple task: *"Create a featured snippet for 'What is content marketing?'"*
+
+### For SEO Professionals
+
+**Complete workflow:**
+
+```bash
+# 1. Clean your search data
+python tools/gsc_ahrefs_clean.py gsc_export.csv > data_summary.md
+
+# 2. Analyze with your agent
+"Using the SEO-AEO-GEO skills, analyze this GSC data [paste data_summary.md]. 
+Prioritize opportunities using striking distance and high impression rules."
+```
+
+**Common use cases:**
+
+| Task | Prompt | Skill Used |
+|------|--------|------------|
+| Analyze content gaps | "Analyze this GSC export and prioritize opportunities" | `serp-gap-analysis.SKILL.md` |
+| Create featured snippet | "Write a featured snippet for [query]" | `aeo-snippet-writer.SKILL.md` |
+| Optimize for AI citations | "Make this content citable by ChatGPT and Perplexity" | `geo-visibility.SKILL.md` |
+| Run technical audit | "Audit this site for indexability issues" | `technical-seo-audit.SKILL.md` |
+| Create topic cluster | "Build a topic cluster around [topic]" | `seo-os.SKILL.md` |
+| Generate llms.txt | "Create llms.txt for my site" | `geo-visibility.SKILL.md` |
+
+---
+
+## Python Data Cleaner
+
+**Prerequisites:**
+- Python 3.8 or higher
+- No additional packages required (standard library only)
+
+**Usage:**
+
+```bash
+# View help
+python tools/gsc_ahrefs_clean.py --help
+
+# Basic usage
+python tools/gsc_ahrefs_clean.py your_export.csv
+
+# Save to markdown file
+python tools/gsc_ahrefs_clean.py your_export.csv > summary.md
+```
+
+**Output includes:**
+- Dataset summary (total rows, unique queries, unique pages)
+- Performance by page (clicks, impressions, average position)
+- Striking distance queries (positions 6-20)
+
+**Supported exports:** Google Search Console, Ahrefs, Semrush
+
+---
+
+## Documentation
+
+| File | Purpose |
+|------|---------|
+| **SKILL.md** | Entry point and orchestrator |
+| **docs/skill-usage.md** | Complete workflow guide |
+| **docs/geo-optimization-guide.md** | Deep-dive GEO strategy (29KB) |
+| **templates/aeo-brief.md** | Content planning template |
+| **templates/technical-seo-audit.md** | Technical audit framework |
+
+---
+
+## Compatible AI Agents
+
+**Tested:**
+- Cursor
+- Claude Code
+- ChatGPT (Custom GPT)
+- Claude Projects
+- Gemini Gems
+
+Works with any agent supporting custom instructions and file attachments.
+
+---
+
+## Who This Is For
+
+**Ideal for:**
+- In-house SEO teams managing multiple projects
+- Content strategists planning topic clusters
+- Technical SEOs running audits
+- Marketing teams exploring AI search visibility
+- Agencies needing repeatable workflows
+
+**Requires:** Intermediate SEO knowledge (keywords, rankings, backlinks, technical SEO basics)
+
+---
+
+## Updating
+
+**Via skills.sh:**
+```bash
+npx skills update
+```
+
+**Manual installation:**
+```bash
+cd SEO-AEO-GEO-Assistant
+git pull origin main
+```
+
+Re-upload updated files to your agent if needed.
+
+---
+
+## Troubleshooting
+
+**Python script errors:**
+- Ensure Python 3.8+ is installed: `python --version`
+- Script uses standard library only, no pip installs needed
+- For encoding errors, export CSV as UTF-8
+
+**Skill not triggering:**
+- Verify `SKILL.md` is loaded correctly
+- Explicitly mention skills: "Using the SEO-AEO-GEO skills..."
+- Check agent's context window limits
+
+**Installation issues:**
+- For `npx skills add` failures, try manual installation
+- Some agents have file size limits—prioritize core files
+- Check that repository is public and accessible
+
+[Open an issue](https://github.com/kxwu222/SEO-AEO-GEO-Assistant/issues) for additional support.
 
 ---
 
 ## Contributing
 
-If you’d like to:
+Contributions welcome. To contribute:
 
-- Suggest improvements to workflows
-- Add new templates (e.g. for specific verticals)
-- Report issues or ambiguities
-
-Open an issue or pull request with a clear description and, where possible, concrete examples from your own use cases.
+1. Fork the repository
+2. Create a branch: `git checkout -b feature/your-improvement`
+3. Make changes and test with an AI agent
+4. Submit pull request with clear description
 
 ---
 
 ## License
 
-This project is licensed under the **MIT License**. You are free to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the software, subject to the terms of the MIT licence.
+MIT License. Free to use, modify, and distribute for commercial and personal projects.
 
-See the `LICENSE` file for full details.
+See [LICENSE](LICENSE) for details.
+
+---
+
+## FAQ
+
+**Do I need coding skills?**  
+No. Main skills are plain Markdown. Python script is optional for data cleaning.
+
+**Will this work with existing SEO tools?**  
+Yes. Complements existing tools—export data from GSC/Ahrefs/Semrush and analyze with the agent.
+
+**Can I use this for client work?**  
+Yes. MIT license allows commercial use.
+
+**How often is this updated?**  
+Quarterly for major updates, as-needed for bug fixes.
+
+---
+
+## Changelog
+
+### v2.0 (March 2025)
+- Modular skill architecture
+- Complete GEO optimization coverage
+- Technical SEO audit framework
+- Data cleaner Python script
+- Comprehensive documentation
+- Industry-agnostic design
+
+### v1.0 (February 2025)
+- Initial release
+- SEO + AEO coverage
+- Basic snippet templates
+
+---
