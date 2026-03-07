@@ -39,66 +39,66 @@ SEO-AEO-GEO-Assistant/
 ```
 
 ---
+## Installation & setup
 
-## Installation
+### 1. Get the files
 
-### Method 1: Via skills.sh (Recommended)
+You don’t “install” this like a package – you just need the Markdown files available to your IDE or AI tool.
 
-```bash
-npx skills add kxwu222/SEO-AEO-GEO-Assistant
-```
+- **Option A – Clone with git (recommended)**
 
-Verify installation:
-```bash
-npx skills list
-```
+  ```bash
+  git clone https://github.com/kxwu222/SEO-AEO-GEO-Assistant.git
+  cd SEO-AEO-GEO-Assistant
+  ```
 
-Compatible with Claude Code, Cursor, Windsurf, and other skills.sh-enabled agents.
+- **Option B – Download as ZIP**
+  - Go to the GitHub repo in your browser.
+  - Click **“Download ZIP”**, then unzip it to a folder on your machine.
 
----
+The Skill pack itself is **Markdown-only** (`SKILL.md`, `skills/*`, `templates/*`, `docs/*`), so there is **nothing to install or build**.  
+The only optional dependency is the helper script `tools/gsc_ahrefs_clean.py`, which needs **Python 3.8+** if you choose to use it.
 
-### Method 2: Manual Installation
+### 2. Use it from your IDE + LLM chat
 
-**Step 1: Clone the repository**
-```bash
-git clone https://github.com/kxwu222/SEO-AEO-GEO-Assistant.git
-cd SEO-AEO-GEO-Assistant
-```
+The general pattern is:
 
-**Step 2: Install in your AI agent**
+1. **Open this folder** in your IDE or AI-friendly environment.
+2. When you start a chat, **attach or reference**:
+   - `SKILL.md` (entry point / global rules)
+   - The relevant specialist skills in `skills/`
+   - Any templates in `templates/` that match the task
+3. In your first message, tell the model something like:  
+   *“Follow `SKILL.md` as your main instructions and use the specialist skills in `skills/` as needed.”*
 
-<details>
-<summary>ChatGPT (Custom GPT)</summary>
+Concrete examples:
 
-1. Go to https://chat.openai.com/gpts/editor
-2. Click "Create a GPT"
-3. Paste `SKILL.md` contents into Instructions
-4. Upload `.md` files from `skills/`, `templates/`, and `docs/` to Knowledge
-5. Name it "SEO-AEO-GEO Assistant" and save
-</details>
+- **Cursor**  
+  - Open this repo as a project.  
+  - In chats, reference `SKILL.md` and individual Skill files with `@SKILL.md`, `@skills/seo-os.SKILL.md`, etc.
 
-<details>
-<summary>Claude</summary>
+- **VS Code / other IDEs with inline chat**  
+  - Open the folder as a workspace.  
+  - Use the chat panel’s “attach file” / “include open file” features to include `SKILL.md` and the relevant `skills/*` or `templates/*` files.
 
-1. Create new Project in Claude.ai
-2. Upload `SKILL.md` and files from `skills/`, `templates/`, `docs/`
-3. Add to Custom Instructions:
-   ```
-   You are an expert SEO strategist with access to the SEO-AEO-GEO-Assistant 
-   skill package. Follow workflows in SKILL.md. Use data-first methodology—
-   never invent metrics.
-   ```
-4. Save the project
-</details>
+### 3. Use it in AI chats
 
-<details>
-<summary>Gemini (Gem)</summary>
+You can also use the same files directly in hosted tools:
 
-1. Go to https://gemini.google.com/gems → New Gem
-2. Paste `SKILL.md` contents into Instructions
-3. Upload key files: `skills/seo-os.SKILL.md`, `docs/geo-optimization-guide.md`
-4. Name "SEO-AEO-GEO Assistant" and save
-</details>
+- **ChatGPT (Custom GPT or Chat)**  
+  - For a Custom GPT: upload this repo (or the key Skill files) as **Knowledge** and paste the most important rules from `SKILL.md` into the system instructions.  
+  - For a one-off chat: upload `SKILL.md` + any relevant `skills/*`/`templates/*` and refer to them in your first message.
+
+- **Claude (Projects)**  
+  - Create a Project and add this folder (or a ZIP) as project files.  
+  - Start chats that reference `SKILL.md` and the specific Skills you want to use.
+
+- **Gemini, Perplexity, and others**  
+  - Upload or paste `SKILL.md` plus any relevant Skills/templates.  
+  - Explicitly tell the model to follow those instructions when answering.
+
+After setup, see `docs/skill-usage.md` for a step‑by‑step workflow guide across all Skills.
+
 
 ---
 
