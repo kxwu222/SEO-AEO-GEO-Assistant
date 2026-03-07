@@ -1,6 +1,6 @@
 ---
 name: seo-aeo-geo-assistant
-description: Entry-point Skill (thin orchestrator) for the SEO–AEO–GEO modular package. Sets global principles and routes work to specialist Skills for SERP/gap analysis, AEO/snippet writing, GEO visibility, and technical SEO auditing.
+description: Entry-point Skill for the SEO–AEO–GEO modular package. Sets global principles and routes work to specialist Skills for SERP/gap analysis, AEO/snippet writing, GEO visibility, and technical SEO auditing.
 ---
 
 # SEO, AEO & GEO assistant (Entry Point)
@@ -101,3 +101,12 @@ This skill comes with supporting templates and tools:
 - **`tools/gsc_ahrefs_clean.py`**: Helper script to clean and summarise CSV exports into Markdown tables for analysis
 
 Refer to these templates when user requests specific deliverables.
+
+---
+
+## Security & scope
+
+- This Skill file is **purely declarative guidance** written in Markdown; it contains **no executable code, secrets, or API keys**.
+- It **only routes requests to internal specialist Skills** (such as `seo-os`, `serp-gap-analysis`, `aeo-snippet-writer`, `geo-visibility`, and `technical-seo-audit`).
+- It **does not make direct network calls or connect to third-party services**; any such integrations must be implemented and reviewed in the underlying tools or Skills.
+- Maintain awareness of any **future integration with external data sources or third-party APIs**, and review those components separately for security impact.
